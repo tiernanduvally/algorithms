@@ -2,22 +2,35 @@
 #include "functions.hpp"
 
 int abs_val(int x) {
-  return (x > 0) ? x : x * -1;
-}
+  //return (x > 0) ? x : x * -1;
+  if(x>=0)
+      return x;
+ return abs_val(x * -1);
+  }
 
 int pow(int base, int num) {
-  int ret = 1;
-  for (int i = 0; i < num; ++i) {
-    ret *= base;
-  }
-  return ret;
+  // int ret = 1;
+  // for (int i = 0; i < num; ++i) {
+  //   ret *= base;
+  // }
+  // return ret;
+  if(num==0)
+    return 1;
+  if(num==1)
+    return base;
+ 
+return pow(base,num-1)*base;
 }
 
 int log(int base, int num) {
-  int count = 0;
-  for (num; num > 1; num /= base)
-    ++count;
-  return count;
+  // int count = 0;
+  // for (num; num > 1; num /= base)
+  //   ++count;
+  // return count;
+  if(num<=base)
+    return 1;
+ 
+return log(base,num/base)+1;
 }
 
 int chartoint(char c) {
@@ -39,7 +52,12 @@ int ord(char c) {
 }
 
 int max(int x, int y) {
-  return (x > y) ? x : y;
+  //return (x > y) ? x : y;
+  if(x>=y){
+    return x;
+  }
+  return max(y,x);
+
 }
 
 int max(int x, int y, int z) {
@@ -47,7 +65,11 @@ int max(int x, int y, int z) {
 }
 
 int min(int x, int y) {
-  return (x < y) ? x : y;
+  //return (x < y) ? x : y;
+    if(x>=y){
+    return y;
+  }
+  return min(y,x);
 }
 
 int min(int x, int y, int z) {
@@ -63,13 +85,20 @@ int round(double x, char c) {
 }
 
 int max(int arr[], int n) {
-  int max = arr[0];
-  for (int i = 1; i < n; ++i) {
-    if (arr[i] > max)
-      max = arr[i];
-  }
-  return max;
+  // int max = arr[0];
+  // for (int i = 1; i < n; ++i) {
+  //   if (arr[i] > max)
+  //     max = arr[i];
+  // }
+  // return max;
+if(n==0)
+  return 0;
+if(n==1)
+  return arr[0];
+
+return max(arr[n-1],max(arr,n-1));
 }
+
 
 int min(int arr[], int n) {
   int min = arr[0];
