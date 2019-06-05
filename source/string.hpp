@@ -7,7 +7,8 @@ class String {
  private:
   char* array;
   int _capacity;
-  int length;
+
+  
 
 
  public:

@@ -49,35 +49,69 @@ String::~String() {
 //------------------------------------------------------------------
   
   char String::at(int x) const{
-      if(x == '\0'){
-          throw x;
-      }else{
-          return array[x];
-      }
-  
+    //   if(*(array) > '\0'){
+    //       return array[x];
+    //   }else{
+    //       throw "Select Another Value";
+    //   }
+    return *array;
   }
 
   bool String::empty() const{
-   if(array == 0){
-       return 1;
-   }else{
-       return 0;
-   }
+      //if array is not empty return false
+      if(*(array) != 0){
+          return 0;
+     // else return true
+      }else{
+          return 1;
+      }
   }
 
   unsigned int String::size() const{
-    //   for(int i = 0; i < length; i++){
-    //       return array[i];
-    //   }
-      return 0;
+      //used to access subsequent array elements
+      int sub = 0;
+      //used to count number of elements in the array
+      int count = 0;
+    //while *array + offset don't equal NULL 
+      while(*(array + sub) != '\0'){
+          //increment count 
+          count++; 
+         //advance to the next element 
+          sub++;
+      }
+    //return size of array
+    return count;
   }
+  
 
   unsigned int String::capacity() const{
-      return array[length+1];
+     //combined empty and 
+     int sub = 0;
+     int count = 0;
+     
+     if(*(array) == 0){
+         return 0;
+     }else{
+          while(*(array + sub) != '\0'){
+          //increment count 
+          count++; 
+         //advance to the next element 
+          sub++;
+      }
+    //return size of array
+    return count;
   }
+  
+
+}
+
 
   void String::reserve(unsigned int x){
-      return;
+    //   for(int i = 0; i < x/2; i++){
+    //       char temp = array[i];
+    //       array[i] = array[x-i-1];
+    //       array[x-i-1] = temp;
+
   }
 
   void String::insert(char s, int x){
@@ -85,7 +119,12 @@ String::~String() {
   }
 
   void String::erase(char s){
-      return;
+      char temp = s;
+      while(*(array)=='\0'){
+          if(*array == temp){
+              temp = '\0';
+          }
+      }
   }
 
   void String::remove(int x){
@@ -93,8 +132,7 @@ String::~String() {
   }
 
   void String::append(char s){
-    
-  }
+}
 
   void String::prepend(char s){
       
@@ -109,7 +147,17 @@ String::~String() {
   }
 
   void String::concatenate(char* str ){
-      return;
+      int c = 0; 
+      int d = 0;
+      while(array[c] != '\0'){
+          c++;
+      }
+      while(str[d] != '\0' ){
+          array[c] = str[d];
+          d++;
+          c++;
+      }
+    array[c] = '\0';
   }
   void String::concatenate(String&){
       return;
@@ -139,12 +187,14 @@ void String::shift(int x){
 }
 
 int String::toInt() const{
-   char * s;
-   int n = 0;
-   for(int i = 0; s[i] >= '0' && s[i]<= '9'; i++){
-       n = 10 * n + (s[i] - '0');
-   }
-    return n;
+//    char * s;
+//    int n = 0;
+//    for(int i = 0; s[i] >= '0' && s[i]<= '9'; i++){
+//        n = 10 * n + (s[i] - '0');
+//    }
+//     return n;
+
+return 0;
 }
 
 String String::substr(int x, int y) const{
