@@ -187,12 +187,6 @@ void String::shift(int x){
 }
 
 int String::toInt() const{
-//    char * s;
-//    int n = 0;
-//    for(int i = 0; s[i] >= '0' && s[i]<= '9'; i++){
-//        n = 10 * n + (s[i] - '0');
-//    }
-//     return n;
 
 return 0;
 }
