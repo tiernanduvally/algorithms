@@ -8,9 +8,6 @@ class String {
   char* array;
   int _capacity;
 
-  
-
-
  public:
   /** Constructors */
   String();
@@ -20,6 +17,9 @@ class String {
   /** Destructors */
   ~String();
 
+
+
+  int len();
   /** at(int position)
    * Returns the character at the given position, throws an exception if the
    * position is out of bounds.
