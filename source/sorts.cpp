@@ -17,7 +17,6 @@ void bubble_sort(int* arr, int n) {
   }
 }
 
-<<<<<<< HEAD
 /** Selection Sort
  * O(?), Omega(?), Theta(?)
  */
@@ -26,29 +25,5 @@ void bubble_sort(int* arr, int n) {
  * O(?), Omega(?), Theta(?)
  */
 
-void insertion_sort(int* arr, int n)
- {
 
-   int min;
-  for(int i =0; i < n; i++)
-  {
-    min = i;
-    for(int j = i; j > 0  ; j--)
-    {
-      if(arr[j-1] > arr[j])
-      {
-        int temp = arr[j-1];
-        arr[j-1] = arr[j];
-        arr[j]=temp;
-      }
-      else
-      {
-        break;
-      }
-      
-    }
-  }
-  
- }
- 
->>>>>>> upstream/master
+

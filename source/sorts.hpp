@@ -1,10 +1,5 @@
 #ifndef __SORTS__
 #define __SORTS__
-<<<<<<< HEAD
-
-#include "doctest/doctest/doctest.h"
-
-=======
 #include "doctest/doctest/doctest.h"
 
 /* Auxiliary Functions */
@@ -51,7 +46,6 @@ TEST_CASE("Testing merge function") {
   }
 }
 
->>>>>>> upstream/master
 typedef void (*sort_fn)(int*, int);
 
 void bubble_sort(int* arr, int n);
