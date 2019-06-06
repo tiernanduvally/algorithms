@@ -18,7 +18,6 @@ class String {
   ~String();
 
 
-
   int len();
   /** at(int position)
    * Returns the character at the given position, throws an exception if the
