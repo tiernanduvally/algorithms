@@ -87,7 +87,25 @@ void insertion_sort(int* arr, int n) {
   }
 }
 
-void merge(int* arr, int n, int mid){
+void merge(int* arr, int n, int mid) {
+  int temp[n];
+  for(int i = 0; i < n; i++){
+    temp[i] = arr[i];
+  }
+  int k = mid;
+  for(int i = 0; i < n; i++){
+    
+  }
+  int j = 0;
+  for (int i = 0; i < n; i++) {
+    if(j >= mid[arr]){
+      arr[i] = temp;
+      k = k + 1;
+    }
+  else if(k >=){
 
+  }
+  }
 }
 
+void mergesort(int* arr, int n) {}

@@ -54,12 +54,6 @@ void insertion_sort(int* arr, int n);
 
 void selection_sort(int* arr, int n);
 
-<<<<<<< HEAD
-sort_fn sorts[] = {bubble_sort, insertion_sort, selection_sort};
-char names[][20] = {"Bubble sort", "Insertion sort", "Selection sort"};
-
-TEST_CASE("Sorting Functions.") {
-=======
 void mergesort(int* arr, int n);
 
 sort_fn sorts[] = {bubble_sort, insertion_sort, selection_sort, mergesort};
@@ -67,7 +61,6 @@ char names[][20] = {"Bubble sort", "Insertion sort", "Selection sort",
                     "Mergesort"};
 
 TEST_CASE("Testing sorting functions") {
->>>>>>> upstream/master
   int arr1[1] = {1};
   int arr2[2] = {2, 1};
   int arr3[5] = {5, 4, 3, 2, 1};
