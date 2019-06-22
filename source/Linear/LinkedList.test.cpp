@@ -5,7 +5,9 @@
 
 TEST_CASE("Constructor") {
   LinkedList list;
+  //std::cout<<"hello"<<std::endl;
   CHECK(list.length() == 0);
+  //std::cout<<"hello1"<<std::endl;
 }
 
 TEST_CASE("at") {

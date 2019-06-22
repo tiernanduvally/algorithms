@@ -23,6 +23,7 @@ class Stack {
  private:
   Node* head;
   unsigned int len;
+  //Linkedlist *list;
 
  public:
   Stack();

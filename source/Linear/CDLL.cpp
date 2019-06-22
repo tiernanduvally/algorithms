@@ -1,12 +1,28 @@
 #include "LinkedList.hpp"
 
-LinkedList::LinkedList() {}
+LinkedList::LinkedList() {
+  head = nullptr;
+  tail = nullptr;
+  len = 0;
+}
 
-LinkedList::~LinkedList() {}
+LinkedList::~LinkedList() {
+}
 
-unsigned int LinkedList::length() {}
+unsigned int LinkedList::length() {
+  return len;
+}
 
-void LinkedList::push_front(int d) {}
+void LinkedList::push_front(int d) {
+  Node* temp = new Node(d);
+  if (!head) {
+    head = temp;
+  } else {
+    temp->next = head->next;
+    temp->prev = head;
+  }
+  len++;
+}
 
 int LinkedList::pop_front() {}
 
@@ -24,7 +40,21 @@ void LinkedList::push(int d, int idx) {}
 
 int LinkedList::pop(int idx) {}
 
-void LinkedList::clear() {}
+void LinkedList::clear() {
+  Node* to_remove;
+  if (!head) {
+    throw "Empty List";
+  }
+  while (head) {
+    to_remove = head;
+    head = head->next;
+    head->prev = tail;
+    tail->next = head->next;
+    delete to_remove;
+    // len--;
+  }
+  len = 0;
+}
 
 void LinkedList::remove(int d) {}
 
