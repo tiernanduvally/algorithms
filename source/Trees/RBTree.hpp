@@ -64,6 +64,7 @@ class RBTree {
   /** clear(Node* n)
    * Recursively deletes the entire subtree rooted at n.
    */
+  
   void clear(Node* n);
 
   /** preorder()
@@ -102,18 +103,18 @@ class RBTree {
   /** is_empty()
    * Returns true if the tree is empty and false otherwise
    */
-  bool is_empty() { return !root; };
+  bool is_empty(); //return !root; };
 
   /** search(int data)
    * Searches the tree for the given data, returning true if the data
    * is found and false otherwise.
    */
-  bool search(int data) { return search(data, root); }
+  bool search(int data); //return search(data, root); }
 
   /** remove(int data)
    * Removes the given data from the tree, provided it exists.
    */
-  void remove(int data) { remove(data, root); }
+  void remove(int data); //remove(data, root); 
 
   /** height()
    * Determines and returns the height of the tree.
